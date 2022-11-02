@@ -5,3 +5,33 @@
     --light-color: #3ea2c4;
     --white-color: #20c3bc;
 }
+
+body {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .5em 1em;
+    background-color: var(--medium-color);
+    margin: 0;
+    position: sticky;
+    width: 100%;
+}
+
+#navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 0;
+}
+
+#navigation>li>a {
+    text-decoration: none;
+    color: var(--white-color);
+}
