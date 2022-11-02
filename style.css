@@ -17,7 +17,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     padding: .5em 1em;
-    background-color: var(--medium-color);
+    background-color: var(--white-color);
     margin: 0;
     position: sticky;
     width: 100%;
@@ -33,5 +33,10 @@ nav {
 
 #navigation>li>a {
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--dark-color);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
 }
