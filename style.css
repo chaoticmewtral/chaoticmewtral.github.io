@@ -1,9 +1,12 @@
 :root {
-    --dark-color: #0f0c24;
-    --medium-color: #a350a3;
-    --accent-color: #c1436d;
-    --light-color: #3ea2c4;
-    --white-color: #20c3bc;
+    --dark-color: #043442;
+    --medium-color: #53dbc4;
+    --accent-color: #deb992;
+    --light-color: #a9ede2;
+    --white-color: #e5e7e7;
+
+    /* Gradient Background Values */
+    
 }
 
 body {
@@ -17,7 +20,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     padding: .5em 1em;
-    background-color: var(--white-color);
+    background-color: var(--light-color);
     margin: 0;
     position: sticky;
     width: 100%;
@@ -34,6 +37,12 @@ nav {
 #navigation>li>a {
     text-decoration: none;
     color: var(--dark-color);
+}
+
+#navigation>li>a:hover {
+    text-decoration-line: overline underline;
+    color: var(--accent-color);
+    font-weight: bold;
 }
 
 header {
