@@ -42,3 +42,34 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+
+#color-palette {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#color-palette>div {
+    width: 25px;
+    height: 25px;
+}
+
+#dark {
+    background-color: var(--dark-color);
+}
+
+#medium {
+    background-color: var(--medium-color);
+}
+
+#accent {
+    background-color: var(--accent-color);
+}
+
+#light {
+    background-color: var(--light-color);
+}
+
+#white {
+    background-color: var(--white-color);
+}
