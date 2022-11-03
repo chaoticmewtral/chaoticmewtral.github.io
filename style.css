@@ -1,5 +1,5 @@
 :root {
-    --dark-color: #0f0c24;
+    --dark-color: rgb(15, 12, 36);
     --medium-color: #a350a3;
     --accent-color: #c1436d;
     --light-color: #3ea2c4;
@@ -109,7 +109,21 @@ header {
     background-size: contain, 100%;
 }
 
+#title {
+    background-color: rgba(15, 12, 36, .8);
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    margin: 3em 0;
+    padding: 2em;
+}
 
+header>p {
+    background-color: rgba(15, 12, 36, .8);
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    margin: 3em 0;
+    padding: 2em;
+}
 
 #color-palette {
     display: flex;
