@@ -1,12 +1,42 @@
 :root {
-    --dark-color: #043442;
-    --medium-color: #53dbc4;
-    --accent-color: #deb992;
-    --light-color: #a9ede2;
-    --white-color: #e5e7e7;
+    --dark-color: #0f0c24;
+    --medium-color: #a350a3;
+    --accent-color: #c1436d;
+    --light-color: #3ea2c4;
+    --white-color: #20c3bc;
 
     /* Gradient Background Values */
     
+    /* // overall gradient background color */
+  --gradient_bg_color: val(--medium-color); 
+
+  /* // spot 1 - top left corner */
+  --gradient_spot1_color: var(--dark-color); 
+  --gradient_spot1_w: 75%;
+  --gradient_spot1_h: 75%;
+  --gradient_spot1_x: 0%;
+  --gradient_spot1_y: 0%;
+
+  /* // spot 2 - top right corner */
+  --gradient_spot2_color: var(--accent-color); 
+  --gradient_spot2_w: 75%;
+  --gradient_spot2_h: 75%;
+  --gradient_spot2_x: 100%;
+  --gradient_spot2_y: 0%;
+
+  /* // spot 3 - bottom right corner */
+  --gradient_spot3_color: var(--light-color); 
+  --gradient_spot3_w: 75%;
+  --gradient_spot3_h: 75%;
+  --gradient_spot3_x: 100%;
+  --gradient_spot3_y: 100%;
+
+  /* // spot 4 - bottom left corner */
+  --gradient_spot4_color: var(--white-color);
+  --gradient_spot4_w: 75%;
+  --gradient_spot4_h: 75%;
+  --gradient_spot4_x: 0%;
+  --gradient_spot4_y: 100%;
 }
 
 body {
@@ -50,6 +80,32 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-image:
+    (url("images/pride-dice.png")),
+    radial-gradient(
+      var(--gradient_spot1_w) var(--gradient_spot1_h)
+      at left var(--gradient_spot1_x) top var(--gradient_spot1_y),
+      var(--gradient_spot1_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot2_w) var(--gradient_spot2_h)
+      at left var(--gradient_spot2_x) top var(--gradient_spot2_y),
+      var(--gradient_spot2_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot3_w) var(--gradient_spot3_h)
+      at left var(--gradient_spot3_x) top var(--gradient_spot3_y),
+      var(--gradient_spot3_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot4_w) var(--gradient_spot4_h)
+      at left var(--gradient_spot4_x) top var(--gradient_spot4_y),
+      var(--gradient_spot4_color),
+      transparent
+    );
 }
 
 #color-palette {
