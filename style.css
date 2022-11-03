@@ -80,8 +80,8 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-image:
-    (url("images/pride-dice.png")),
+    background:
+    url("images/pride-dice.png"),
     radial-gradient(
       var(--gradient_spot1_w) var(--gradient_spot1_h)
       at left var(--gradient_spot1_x) top var(--gradient_spot1_y),
@@ -106,7 +106,10 @@ header {
       var(--gradient_spot4_color),
       transparent
     );
+    background-size: contain, 100%;
 }
+
+
 
 #color-palette {
     display: flex;
