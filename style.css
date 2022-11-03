@@ -53,7 +53,7 @@ nav {
     background-color: var(--light-color);
     margin: 0;
     position: sticky;
-    width: 100%;
+    max-width: 900px;
 }
 
 #navigation {
