@@ -1,0 +1,35 @@
+:root {
+    --main-color: black;
+    --accent-color: teal;
+    --text-color: antiquewhite;
+}
+
+html {
+    font-family: Ubuntu, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        'header header'
+
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+header img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
