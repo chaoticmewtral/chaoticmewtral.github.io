@@ -1,0 +1,128 @@
+:root {
+    --dark-color: var(--gradient_bg_color);
+    --medium-color: var(--gradient_spot1_color);
+    --accent-color: var(--gradient_spot2_color);
+    --light-color: var(--gradient_spot3_color);
+    --white-color: var(--gradient_spot4_color);
+
+    /* Gradient Background Values */
+    
+    /* // overall gradient background color */
+  --gradient_bg_color: val(--medium-color); 
+
+  --gradient_bg_color:#000000; --gradient_spot1_color:#194e8f; --gradient_spot2_color:#804691; --gradient_spot3_color:#2c92b5; --gradient_spot4_color:#ac1151; --gradient_spot4_x:43%; --gradient_spot2_x:64%; --gradient_spot2_y:28%; --gradient_spot4_w:87%; --gradient_spot3_x:69%; --gradient_spot3_y:86%; --gradient_spot4_h:73%; --gradient_spot4_y:67%; --gradient_spot3_w:43%; --gradient_spot3_h:60%; --gradient_spot1_w:69%; --gradient_spot1_h:64%; --gradient_spot1_x:21%; --gradient_spot1_y:13%; --gradient_spot2_w:58%; --gradient_spot2_h:84%;
+}
+
+* {
+    font-family: Ubuntu, sans-serif;
+}
+
+body {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .5em 1em;
+    background-color: var(--light-color);
+    margin: 0;
+    position: sticky;
+    max-width: 900px;
+}
+
+#navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 0;
+}
+
+#navigation>li>a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+#navigation>li>a:hover {
+    text-decoration-line: overline underline;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+header {
+    background:
+    url("images/pride-dice.png"),
+    radial-gradient(
+      var(--gradient_spot1_w) var(--gradient_spot1_h)
+      at left var(--gradient_spot1_x) top var(--gradient_spot1_y),
+      var(--gradient_spot1_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot2_w) var(--gradient_spot2_h)
+      at left var(--gradient_spot2_x) top var(--gradient_spot2_y),
+      var(--gradient_spot2_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot3_w) var(--gradient_spot3_h)
+      at left var(--gradient_spot3_x) top var(--gradient_spot3_y),
+      var(--gradient_spot3_color),
+      transparent
+    ),
+    radial-gradient(
+      var(--gradient_spot4_w) var(--gradient_spot4_h)
+      at left var(--gradient_spot4_x) top var(--gradient_spot4_y),
+      var(--gradient_spot4_color),
+      transparent
+    );
+    background-size: contain, 100%;
+}
+
+#h-container {
+    background-color: rgba(15, 12, 36, .8);
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    top: 2em;
+}
+
+#color-palette {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#color-palette>div {
+    width: 25px;
+    height: 25px;
+}
+
+#dark {
+    background-color: var(--dark-color);
+}
+
+#medium {
+    background-color: var(--medium-color);
+}
+
+#accent {
+    background-color: var(--accent-color);
+}
+
+#light {
+    background-color: var(--light-color);
+}
+
+#white {
+    background-color: var(--white-color);
+}
