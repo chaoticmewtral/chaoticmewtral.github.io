@@ -117,7 +117,8 @@ nav ul li a:hover {
 }
 
 #intro {
-    
+    margin: 2em auto;
+    background-color: rgba(133, 207, 203, .8);
 }
 
 #hero:before {
