@@ -75,7 +75,6 @@ body {
 }
 
 #bgi {
-    content: "";
     width: 100%;
     min-height: 100vh;
     background-image: url(images/pride-dice.png);
@@ -91,7 +90,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-        "h1 h1 .  ."
+        "h1 h1 .  res"
         "ab ab ab ab"
         "more more more pf"
         "odin odin odin pf";
@@ -100,6 +99,11 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     backdrop-filter: blur(1.3px);
+}
+
+#res {
+    grid-area: res;
+    justify-self: end;
 }
 
 h1 {
@@ -156,13 +160,17 @@ a {
     text-decoration: none;
     color: var(--accent-color);
 }
+a:hover {
+    text-decoration-line: overline underline;
+    text-decoration-color: var(--color4);
+}
 
-li>a:hover {
+/* li>a:hover {
     text-decoration: underline;
     background-color: var(--accent-color);
     color: var(--black-color);
     font-weight: bold;
-}
+} */
 
 @media only screen and (max-width: 450px) {
     #container {
