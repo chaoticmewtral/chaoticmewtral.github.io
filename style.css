@@ -1,35 +1,120 @@
 :root {
-    --main-color: black;
-    --accent-color: teal;
-    --text-color: antiquewhite;
+    --black-color: #2C2828;
+    --dark-color: #3B2C85;
+    --accent-color: #219897;
+    --light-color: rgb(133, 207, 203);
+
+    /* Background Gradient */
+    --color1: var(--accent-color);
+    --color2: #0F3460;
+    --color3: #533483;
+    --color4: #E94560;
+
+    --w1: 75%;
+    --h1: 75%;
+    --x1: 0%;
+    --y1: 0%;
+
+    --w2: 75%;
+    --h2: 75%;
+    --x2: 100%;
+    --y2: 0%;
+ 
+    --w3: 75%;
+    --h3: 75%;
+    --x3: 100%;
+    --y3: 100%;
+ 
+    --w4: 75%;
+    --h4: 75%;
+    --x4: 0%;
+    --y4: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-family: Ubuntu, sans-serif;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 body {
     display: grid;
-    grid-template-areas:
-        'header header'
-
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--black-color);
+    background-image: radial-gradient(var(--w1) var(--h1) at left var(--x1) top var(--y1), var(--color1), transparent), radial-gradient(
+        var(--w2) var(--h2)
+        at left var(--x2) top var(--y2),
+        var(--color2),
+        transparent
+      ),
+      radial-gradient(
+        var(--w3) var(--h3)
+        at left var(--x3) top var(--y3),
+        var(--color3),
+        transparent
+      ),
+      radial-gradient(
+        var(--w4) var(--h4)
+        at left var(--x4) top var(--y4),
+        var(--color4),
+        transparent
+      );
+    grid-template-columns: 100%;
+    position: relative;
 }
 
 header {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 50px 1fr 3fr;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(133, 207, 203, .8);
+    padding: .2em;
+    margin: 0;
+    position: sticky;
 }
 
 header img {
-    max-width: 100px;
+    width: 50px;
+}
+
+#name {
+    font-size: 2em;
+    text-align: left;
+    padding-left: 1em;
+}
+
+nav {
+    justify-self: end;
 }
 
 nav ul {
     list-style: none;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    margin: 0;
+    gap: 1em;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--accent-color);
+    color: var(--black-color);
+}
+
+nav ul li a:hover {
+    text-decoration: overline underline;
+    color: var(--dark-color);
+}
+
+#hero {
+    width: 100%;
 }
