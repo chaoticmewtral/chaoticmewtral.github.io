@@ -117,17 +117,22 @@ h1 {
 #portfolio {
     grid-area: pf;
     justify-self: end;
+    border-top: 1px solid var(--color4);
+    border-left: 1px solid var(--color4);
+    border-top-left-radius: 4px;
+    padding: 1em 0 0 1em;
 }
 
 #portfolio h3 {
-    padding-bottom: .3em;
+    padding-bottom: 1.1em;
+    padding-right: .5em;
 }
 
 ul {
     list-style: none;
     display: grid;
     padding-left: .4em;
-    gap: .3em;
+    gap: 1em;
 }
 
 li>a {
@@ -139,4 +144,5 @@ li>a:hover {
     text-decoration: underline;
     background-color: var(--accent-color);
     color: var(--black-color);
+    font-weight: bold;
 }
