@@ -175,3 +175,7 @@ a:hover {
 svg {
     fill: var(--accent-color);
 }
+
+a>svg:hover {
+    filter: drop-shadow(0 0 4px var(--color4));
+}
