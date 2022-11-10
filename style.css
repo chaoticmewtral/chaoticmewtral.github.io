@@ -116,3 +116,20 @@ h1 {
 #portfolio {
     grid-area: pf;
 }
+
+ul {
+    list-style: none;
+    padding-left: .4em;
+    gap: .4em;
+}
+
+li>a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+li>a:hover {
+    text-decoration: underline;
+    background-color: var(--accent-color);
+    color: var(--color4);
+}
