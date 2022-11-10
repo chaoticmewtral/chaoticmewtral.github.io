@@ -92,7 +92,7 @@ main:before {
         "h1 h1 .  ."
         "ab ab ab ab"
         ".  .  .  ."
-        ".  .  .  pf"
+        "more more  .  pf"
         ".  .  .  pf";
     width: 90%;
     height: 85vh;
@@ -112,6 +112,10 @@ h1 {
     grid-area: ab;
     justify-self: center;
     font-size: 1.3em;
+}
+
+#more {
+    grid-area: more;
 }
 
 #portfolio {
