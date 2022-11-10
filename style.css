@@ -84,22 +84,35 @@ main:before {
 }
 
 #container {
+    padding: 1em;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
         "h1 h1 . . ."
+        "ab ab . . ."
         ".  .  . . ."
-        ".  .  . . ."
-        ".  .  . . .";
+        "pf  . . . ."
+        "pf  . . . .";
     width: 90%;
-    height: 90vh;
+    height: 85vh;
     margin: 3em auto;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
+    backdrop-filter: blur(1.3px);
 }
 
 h1 {
     font-size: 2.3em;
-    justify-self: center;
+    grid-area: h1;
     align-self: center;
-    backdrop-filter: blur(2px);
+}
+
+#about {
+    grid-area: ab;
+    justify-self: center;
+    font-size: 1.3em;
+}
+
+#portfolio {
+    grid-area: pf;
 }
