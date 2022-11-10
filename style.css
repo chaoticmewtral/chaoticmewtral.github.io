@@ -88,11 +88,11 @@ main:before {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-        "h1 h1 . . ."
-        "ab ab . . ."
-        ".  .  . . ."
-        "pf  . . . ."
-        "pf  . . . .";
+        "h1 h1 .  ."
+        "ab ab ab ."
+        ".  .  .  ."
+        "pf .  .  ."
+        "pf .  .  .";
     width: 90%;
     height: 85vh;
     margin: 3em auto;
