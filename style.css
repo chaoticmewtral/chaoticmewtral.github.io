@@ -69,17 +69,19 @@ body {
         var(--color4),
         transparent
       );
+      background-attachment: fixed;
     grid-template-columns: 100%;
     position: relative;
 }
 
-main:before {
+#bgi {
     content: "";
     width: 100%;
     min-height: 100vh;
     background-image: url(images/pride-dice.png);
     background-size: contain;
     position: absolute;
+    top: 0;
     opacity: .3;
     z-index: -1;
 }
@@ -91,11 +93,9 @@ main:before {
     grid-template-areas:
         "h1 h1 .  ."
         "ab ab ab ab"
-        ".  .  .  ."
-        "more more  .  pf"
-        ".  .  .  pf";
+        "more more more pf"
+        "odin odin odin pf";
     width: 90%;
-    height: 85vh;
     margin: 3em auto;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
@@ -106,6 +106,7 @@ h1 {
     font-size: 2.3em;
     grid-area: h1;
     align-self: center;
+    padding-bottom: 1em;
 }
 
 #about {
@@ -116,6 +117,11 @@ h1 {
 
 #more {
     grid-area: more;
+    align-self: center;
+}
+
+#odin {
+    grid-area: odin;
 }
 
 #portfolio {
@@ -124,7 +130,9 @@ h1 {
     border-top: 1px solid var(--color4);
     border-left: 1px solid var(--color4);
     border-top-left-radius: 4px;
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 #portfolio h3 {
@@ -144,9 +152,36 @@ li>a {
     color: var(--accent-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
 li>a:hover {
     text-decoration: underline;
     background-color: var(--accent-color);
     color: var(--black-color);
     font-weight: bold;
+}
+
+@media only screen and (max-width: 450px) {
+    #container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "h1"
+        "about"
+        "more"
+        "odin"
+        "portfolio";
+    }
+
+    * {
+        padding: .5em 0;
+        margin: 0 auto;
+    }
+
+    body {
+        max-width: 100vw;
+    }
 }
