@@ -48,7 +48,8 @@ body {
     width: 100%;
     margin: 0 auto;
     background-color: var(--black-color);
-    background-image: radial-gradient(var(--w1) var(--h1) at left var(--x1) top var(--y1), var(--color1), transparent), radial-gradient(
+    background-image: 
+    radial-gradient(var(--w1) var(--h1) at left var(--x1) top var(--y1), var(--color1), transparent), radial-gradient(
         var(--w2) var(--h2)
         at left var(--x2) top var(--y2),
         var(--color2),
@@ -115,6 +116,17 @@ nav ul li a:hover {
     color: var(--dark-color);
 }
 
-#hero {
+#intro {
+    
+}
+
+#hero:before {
+    content: "";
     width: 100%;
+    min-height: 94vh;
+    background-image: url(images/pride-dice.png);
+    background-size: contain;
+    position: absolute;
+    opacity: .3;
+    z-index: -1;
 }
